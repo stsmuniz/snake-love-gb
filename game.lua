@@ -22,7 +22,7 @@ local tail_length = 0
 
 local introPlayed = false
 
-local egg = love.graphics.newImage("assets/egg_sprite.png")
+local egg = love.graphics.newImage("/assets/egg_sprite.png")
 
 score = 0
 hiScore = 0
@@ -65,7 +65,7 @@ function game_draw()
     love.graphics.setColor(1, 1, 1) -- egg
     love.graphics.draw(egg, eggX * SIZE, eggY * SIZE)
     
-    love.graphics.setColor(colorConvert({15, 56, 15}))
+    love.graphics.setColor(0, 0, 0)
     love.graphics.rectangle("line", 196, 148, 554, 452)
     
     love.graphics.printf("Score: " .. score, 200, 125, 250, "left")
@@ -149,14 +149,6 @@ function game_update(dt)
     end
 end
 
-
-function colorConvert(colors)
-    for i,color in ipairs(colors) do
-        colors[i] = colors[i] / 255
-    end
-    return colors
-end
-
 function game_keypressed(key)
     if key == "left" and state == gameStates.running then
         left = true; right = false; up = false; down = false
@@ -168,8 +160,6 @@ function game_keypressed(key)
         left = false; right = false; up = false; down = true
     elseif key == "p" and state == gameStates.running then
         state = gameStates.pause
-    elseif key == "g" and state == gameStates.running then
-        state = gameStates.game_over
     elseif key == "f2" then
         love.filesystem.remove("snake_hiscore.txt")
         love.event.quit("restart")

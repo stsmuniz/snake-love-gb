@@ -3,7 +3,7 @@ local gameOverMusic = love.audio.newSource('assets/gameover_music.ogg', 'stream'
 function game_over_draw()
     gameOverMusic:setLooping(true)
     gameOverMusic:play()
-    love.graphics.setColor(colorConvert({15, 56, 15}))
+    love.graphics.setColor(0, 0, 0)
     love.graphics.setFont(gameOverFont)
     love.graphics.printf("Game Over", 197, 200, 555, "center")
     love.graphics.printf("Final Score: " .. score, 197, 250, 555, "center")

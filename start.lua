@@ -14,9 +14,10 @@ function start_draw()
         (love.graphics.getHeight() / 2) - (logo:getHeight() / 2)
     )
     
-    love.graphics.setColor(colorConvert({15, 56, 15}))
+    love.graphics.setColor(0, 0, 0)
     love.graphics.setFont(startFont)
-    love.graphics.printf("Press enter to start\nPress C for credits", 197, love.graphics.getHeight() - 150, 555, "center")
+    love.graphics.printf("Press Enter to start\nPress C for credits", 197, love.graphics.getHeight() - 175, 555, "center")
+    love.graphics.printf("@stsmuniz 2019", 197, love.graphics.getHeight() - 125, 555, "center")
 end
 
 function start_keypressed(key)

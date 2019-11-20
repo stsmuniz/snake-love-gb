@@ -18,6 +18,6 @@ end
 
 function splash_draw()
     love.graphics.setFont(splashFont)
-    love.graphics.setColor(colorConvert({15, 56, 15}))
+    love.graphics.setColor(0, 0, 0)
     love.graphics.printf("Stsmuniz™", 197, posY, 555, "center")
 end

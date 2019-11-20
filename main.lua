@@ -21,7 +21,7 @@ end
 
 function love.draw()
     effect(function()
-        love.graphics.setColor(colorConvert({255, 255, 255}))
+        love.graphics.setColor(1, 1, 1)
         love.graphics.rectangle("fill", 193, 98, 560, 504)
 
         if state == gameStates.splash then
@@ -39,8 +39,6 @@ function love.draw()
 
     love.graphics.setColor(1, 1, 1, 1)
     love.graphics.draw(frame, 0, 0)
-    --love.graphics.setColor(colorConvert({255, 0, 0}))
-    --love.graphics.rectangle("fill", 193, 98, 160 * 3.5, 144 * 3.5)
 end
 
 function love.update(dt)
