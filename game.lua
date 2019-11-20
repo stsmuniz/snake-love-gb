@@ -1,8 +1,6 @@
 local snakeX = 10
 local snakeY = 10
 
-local isSnakeVisible = true
-
 local dirX = 0
 local dirY = 0
 
@@ -72,9 +70,7 @@ function game_draw()
     
     love.graphics.printf("Score: " .. score, 200, 125, 250, "left")
     love.graphics.printf("Hi: " .. hiScore, 450, 125, 250, "left")
-    
-    love.graphics.printf(tostring(isSnakeVisible), 450, 100, 250, "left")
-    
+        
     if up == false and down == false and left == false and right == false and killSoundPlayed == false then
         love.graphics.printf("Press any arrow to move", 197, love.graphics.getHeight() / 2, 555, "center")
     end
